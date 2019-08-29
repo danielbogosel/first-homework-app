@@ -28,18 +28,18 @@ public class DocumentController {
         return documentService.addDocuments(document);
     }
 
-    @GetMapping("{documentId}")
+    @GetMapping("/{documentId}")
     Optional<Document> getByDocumentId(@PathVariable String documentId) {
         return documentService.getDocumentById(documentId);
     }
 
-    @PutMapping("{documentId}")
-    Document updateDocument(@RequestParam String documentId, @RequestBody Document document) {
+    @PutMapping("/{documentId}")
+    Document updateDocument(@PathVariable String documentId, @RequestBody Document document) {
         return documentService.updateDocument(documentId, document);
     }
 
-    @DeleteMapping("{documentId}")
-    Document deleteDocument(@RequestParam String documentId) {
+    @DeleteMapping("/{documentId}")
+    Document deleteDocument(@PathVariable String documentId) {
         return documentService.deleteDocument(documentId);
     }
 }

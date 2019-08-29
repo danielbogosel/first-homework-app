@@ -12,13 +12,13 @@ import java.util.stream.Collectors;
 
 @Service
 public class DocumentService {
-    private List<Document> documents = List.of(
-            new Document(UUID.randomUUID().toString(), "doc1", "Ana are mere", "Ana"),
-            new Document(UUID.randomUUID().toString(), "doc2", "Alin are liniste", "Alin"),
-            new Document(UUID.randomUUID().toString(), "doc3", "Florin are piersic", "Ana"),
-            new Document(UUID.randomUUID().toString(), "doc4", "Hagi are minge", "Hagi")
+    private ArrayList<Document> documents = new ArrayList<>();
+//            new Document(UUID.randomUUID().toString(), "doc1", "Ana are mere", "Ana"),
+//            new Document(UUID.randomUUID().toString(), "doc2", "Alin are liniste", "Alin"),
+//            new Document(UUID.randomUUID().toString(), "doc3", "Florin are piersic", "Ana"),
+//            new Document(UUID.randomUUID().toString(), "doc4", "Hagi are minge", "Hagi")
 
-    );
+
 
     public List<Document> getAllDocumentss(String name, String owner) {
         return documents.stream()
